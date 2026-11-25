@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:ps14_modules/Resources/Private/Language/locallang_tca.xlf" product-name="ps14_modules">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.colPos.nested">
+        <source>Nested in Accordion/Tabs</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

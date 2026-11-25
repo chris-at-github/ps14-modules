@@ -1,0 +1,2 @@
+// Spalte der verschachtelten Inhaltselemente (Akkordeon/Tabs, Typ `content`)
+TCEFORM.tt_content.colPos.addItems.5628 = LLL:EXT:ps14_modules/Resources/Private/Language/locallang_tca.xlf:tt_content.colPos.nested

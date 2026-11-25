@@ -21,6 +21,11 @@ fields:
     foreign_field: tx_foundation_parent
     foreign_table_field: tx_foundation_parent_table
     shareAcrossTables: true
+    overrideChildTca:
+      columns:
+        colPos:
+          config:
+            default: 5628
     appearance:
       collapseAll: true
       levelLinksPosition: bottom

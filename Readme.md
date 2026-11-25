@@ -28,9 +28,14 @@ eingebunden. Die Inhaltselemente nutzen `lib.contentElement` (Layout `Default`
 aus ps14_foundation) und den Data Processor `record-transformation`
 (`{record}`); Template- und Partial-Pfade liegen auf Key `50`.
 
-Verschachtelte Inhaltselemente (Akkordeon-Typ `content`) verweisen über
-`tt_content.tx_foundation_parent` und `tx_foundation_parent_table` auf ihr
-Item.
+Verschachtelte Inhaltselemente (Typ `content` bei Akkordeon und Tabs)
+verweisen über `tt_content.tx_foundation_parent` und
+`tx_foundation_parent_table` auf ihr Item. Sie liegen in colPos `5628`
+(Vorgabe per `overrideChildTca`), damit die Seite sie nicht zusätzlich in
+der Hauptspalte rendert. Die Vorgabe greift nur im Backend-Formular; wer
+per DataHandler oder MCP anlegt, setzt `colPos` selbst.
+`Configuration/page.tsconfig` gibt der Spalte im Feld „Spalte“ ein Label
+(`TCEFORM.tt_content.colPos.addItems.5628`).
 
 ## Basics
 
