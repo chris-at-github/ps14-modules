@@ -1,0 +1,22 @@
+name: ps14/tabs-item-text
+table: tx_modules_tabs_item
+typeField: record_type
+typeName: text
+labelField: title
+prefixFields: false
+priority: 10
+fields:
+  - identifier: title
+    type: Text
+    required: true
+  - identifier: active
+    type: Checkbox
+  - identifier: thumbnail
+    type: File
+    allowed: svg
+    maxitems: 1
+    relationship: manyToOne
+  - identifier: description
+    type: Textarea
+    enableRichtext: true
+    richtextConfiguration: ps14Default

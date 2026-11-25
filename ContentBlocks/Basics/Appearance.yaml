@@ -1,0 +1,9 @@
+# Tabs wie bei den Core-Inhaltselementen: Erscheinungsbild (Rahmen, Abstaende, Links) und Kategorien.
+identifier: Ps14/Appearance
+fields:
+  - identifier: TYPO3/Appearance
+    type: Basic
+  - identifier: TYPO3/Links
+    type: Basic
+  - identifier: TYPO3/Categories
+    type: Basic

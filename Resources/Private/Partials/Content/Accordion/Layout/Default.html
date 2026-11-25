@@ -1,0 +1,29 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers"
+    xmlns:co="http://typo3.org/ns/Ps14/Component/Components/ComponentCollection"
+    data-namespace-typo3-fluid="true">
+
+    <f:section name="Main">
+        <f:if condition="{record.ps14_accordion_items}">
+            <f:variable name="headerLayout">{fo:heading.auto(parent: data.header_layout, children: data.tx_foundation_elements_header)}</f:variable>
+
+            <co:accordion>
+                <f:for each="{record.ps14_accordion_items}" as="item">
+                    <co:accordion.item header="{item.title}" headerLayout="{headerLayout}" id="accordion-{item.uid}">
+                        <f:if condition="{item.recordType} == 'content'">
+                            <f:then>
+                                <f:for each="{item.content}" as="child">
+                                    <f:cObject typoscriptObjectPath="tt_content" data="{child}" table="tt_content" />
+                                </f:for>
+                            </f:then>
+                            <f:else>
+                                <f:render partial="Content/Bodytext" arguments="{bodytext: item.description}" />
+                            </f:else>
+                        </f:if>
+                    </co:accordion.item>
+                </f:for>
+            </co:accordion>
+        </f:if>
+    </f:section>
+</html>

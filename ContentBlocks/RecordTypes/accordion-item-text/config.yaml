@@ -1,0 +1,19 @@
+name: ps14/accordion-item-text
+table: tx_modules_accordion_item
+typeField: record_type
+typeName: text
+labelField: title
+prefixFields: false
+priority: 10
+fields:
+  - identifier: title
+    type: Text
+    required: true
+  - identifier: link
+    type: Link
+  - identifier: active
+    type: Checkbox
+  - identifier: description
+    type: Textarea
+    enableRichtext: true
+    richtextConfiguration: ps14Default

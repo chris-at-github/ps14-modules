@@ -1,0 +1,33 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Akkordeon (Content Block ps14/accordion)
+tt_content {
+  ps14_accordion =< lib.contentElement
+  ps14_accordion {
+    templateName = Accordion
+
+    templateRootPaths {
+      50 = EXT:ps14_modules/Resources/Private/Templates/Content/
+    }
+
+    partialRootPaths {
+      50 = EXT:ps14_modules/Resources/Private/Partials/
+    }
+
+    dataProcessing {
+      10 = record-transformation
+      10 {
+        as = record
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Tabs (Content Block ps14/tabs)
+tt_content.ps14_tabs < tt_content.ps14_accordion
+tt_content.ps14_tabs.templateName = Tabs
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Timeline (Content Block ps14/timeline)
+tt_content.ps14_timeline < tt_content.ps14_accordion
+tt_content.ps14_timeline.templateName = Timeline

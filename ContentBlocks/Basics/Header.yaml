@@ -1,0 +1,23 @@
+# Ueberschriften wie die Core-Palette "headers". tx_foundation_elements_header entsteht erst in den TCA-Overrides
+# von ps14_foundation und wird per Configuration/TCA/Overrides/tt_content.php hinter "subheader" gehaengt.
+identifier: Ps14/Header
+fields:
+  - identifier: headers
+    type: Palette
+    label: core.form.palettes:header
+    fields:
+      - identifier: header
+        useExistingField: true
+      - type: Linebreak
+      - identifier: header_layout
+        useExistingField: true
+      - identifier: header_position
+        useExistingField: true
+      - identifier: date
+        useExistingField: true
+      - type: Linebreak
+      - identifier: header_link
+        useExistingField: true
+      - type: Linebreak
+      - identifier: subheader
+        useExistingField: true

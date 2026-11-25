@@ -1,0 +1,26 @@
+name: ps14/accordion-item-content
+table: tx_modules_accordion_item
+typeField: record_type
+typeName: content
+labelField: title
+prefixFields: false
+fields:
+  - identifier: title
+    type: Text
+    required: true
+  - identifier: link
+    type: Link
+  - identifier: active
+    type: Checkbox
+  - identifier: content
+    type: Collection
+    foreign_table: tt_content
+    foreign_field: tx_foundation_parent
+    foreign_table_field: tx_foundation_parent_table
+    shareAcrossTables: true
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+      showAllLocalizationLink: true
+      showSynchronizationLink: true
+      showPossibleLocalizationRecords: true

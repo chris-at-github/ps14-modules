@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+    <f:section name="Main">
+        <f:if condition="{data.bodytext}">
+            <f:render partial="Content/Bodytext" arguments="{bodytext: data.bodytext}" />
+        </f:if>
+
+        <f:render partial="Content/Tabs/Layout/{data.tx_foundation_variant -> fo:format.pascalCase()}" section="Main" optional="{true}" arguments="{_all}">
+            <f:render partial="Content/Tabs/Layout/Default" section="Main" arguments="{_all}" />
+        </f:render>
+    </f:section>
+</html>

@@ -1,0 +1,39 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers"
+    xmlns:co="http://typo3.org/ns/Ps14/Component/Components/ComponentCollection"
+    data-namespace-typo3-fluid="true">
+
+    <f:section name="Main">
+        <f:if condition="{record.ps14_timeline_items}">
+            <f:variable name="headerLayout">{fo:heading.auto(parent: data.header_layout, children: data.tx_foundation_elements_header)}</f:variable>
+
+            <ol class="timeline">
+                <f:for each="{record.ps14_timeline_items}" as="item">
+                    <li class="timeline__item">
+                        <f:if condition="{item.date}">
+                            <div class="timeline__date">{item.date}</div>
+                        </f:if>
+                        <div class="timeline__content">
+                            <f:if condition="{item.title}">
+                                <co:heading layout="{headerLayout}" class="timeline__title">{item.title}</co:heading>
+                            </f:if>
+                            <f:if condition="{item.description}">
+                                <f:render partial="Content/Bodytext" arguments="{bodytext: item.description}" />
+                            </f:if>
+                            <f:if condition="{item.media}">
+                                <ul class="timeline__media">
+                                    <f:for each="{item.media}" as="file">
+                                        <li class="timeline__media-item">
+                                            <f:image image="{file}" maxHeight="300" class="image image--responsive" />
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </f:if>
+                        </div>
+                    </li>
+                </f:for>
+            </ol>
+        </f:if>
+    </f:section>
+</html>

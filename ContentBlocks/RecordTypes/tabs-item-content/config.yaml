@@ -1,0 +1,29 @@
+name: ps14/tabs-item-content
+table: tx_modules_tabs_item
+typeField: record_type
+typeName: content
+labelField: title
+prefixFields: false
+fields:
+  - identifier: title
+    type: Text
+    required: true
+  - identifier: active
+    type: Checkbox
+  - identifier: thumbnail
+    type: File
+    allowed: svg
+    maxitems: 1
+    relationship: manyToOne
+  - identifier: content
+    type: Collection
+    foreign_table: tt_content
+    foreign_field: tx_foundation_parent
+    foreign_table_field: tx_foundation_parent_table
+    shareAcrossTables: true
+    appearance:
+      collapseAll: true
+      levelLinksPosition: bottom
+      showAllLocalizationLink: true
+      showSynchronizationLink: true
+      showPossibleLocalizationRecords: true

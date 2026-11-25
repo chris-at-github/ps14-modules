@@ -1,0 +1,19 @@
+name: ps14/timeline-item
+table: tx_modules_timeline_item
+labelField: title
+fallbackLabelFields:
+  - date
+prefixFields: false
+fields:
+  - identifier: date
+    type: Text
+  - identifier: title
+    type: Text
+  - identifier: description
+    type: Textarea
+    enableRichtext: true
+    richtextConfiguration: ps14Default
+  - identifier: media
+    type: File
+    allowed: common-image-types
+    maxitems: 3

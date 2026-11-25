@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="labels.xlf" date="2026-11-24T00:00:00Z" product-name="ps14_modules">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Content elements</source>
+      </trans-unit>
+      <trans-unit id="title.label">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="active.label">
+        <source>Initially active</source>
+      </trans-unit>
+      <trans-unit id="thumbnail.label">
+        <source>Icon (SVG)</source>
+      </trans-unit>
+      <trans-unit id="content.label">
+        <source>Content elements</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
