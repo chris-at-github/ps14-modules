@@ -10,7 +10,7 @@ defined('TYPO3') or die();
     // -----------------------------------------------------------------------------------------------------------------
     // Felder aus ps14_foundation, die erst in dessen TCA-Overrides entstehen und deshalb nicht per useExistingField in
     // den Content Blocks bzw. Basics stehen koennen. Content Blocks benennt die Paletten der Basics <CType>_<Palette>.
-    foreach (['ps14_accordion', 'ps14_tabs', 'ps14_timeline'] as $type) {
+    foreach (['ps14_accordion', 'ps14_tabs', 'ps14_timeline', 'ps14_hero'] as $type) {
         // Ueberschriften-Typ der Items (Basic Ps14/Header)
         ExtensionManagementUtility::addFieldsToPalette('tt_content', $type . '_headers', 'tx_foundation_elements_header', 'after:subheader');
 

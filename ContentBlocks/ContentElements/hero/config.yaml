@@ -1,0 +1,24 @@
+name: ps14/hero
+typeName: ps14_hero
+group: default
+basics:
+  - Ps14/Appearance
+fields:
+  - identifier: Ps14/Header
+    type: Basic
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: ps14Default
+  - identifier: image
+    useExistingField: true
+    allowed: common-image-types,mp4,webm
+    maxitems: 1
+    cropVariants:
+      default:
+        title: core.wizards:imwizard.crop_variant.default
+        allowedAspectRatios:
+          16_9:
+            title: core.wizards:imwizard.ratio.16_9
+            value: 16 / 9
+        selectedRatio: 16_9

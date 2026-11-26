@@ -9,8 +9,9 @@ Elements-IRRE von ps14_foundation 2.x aufbauten.
 | CType | Inhalt |
 |---|---|
 | `ps14_accordion` | Akkordeon: Items (`tx_modules_accordion_item`) vom Typ `text` (RTE) oder `content` (verschachtelte Inhaltselemente) |
-| `ps14_tabs` | Tabs: Items mit verschachtelten Inhaltselementen (geplant) |
-| `ps14_timeline` | Timeline: Items mit Datum, Text und Medien (geplant) |
+| `ps14_tabs` | Tabs: Items vom Typ `text` oder `content` (verschachtelte Inhaltselemente) |
+| `ps14_timeline` | Timeline: Items mit Datum, Text und Medien |
+| `ps14_hero` | Hero: Bild oder Video (`image`, 1 Datei, Crop 16:9) mit Überschrift und Text (`bodytext`); Bildgrößen per `settings.images.hero` |
 
 Die CTypes entsprechen den bisherigen Mini-Extensions (`typeName` im Content
 Block), damit bestehende Inhalte, TSconfig und Rechte erhalten bleiben.

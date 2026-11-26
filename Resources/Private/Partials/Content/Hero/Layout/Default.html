@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:section name="Main">
+        <div class="hero">
+            <f:if condition="{images.0}">
+                <div class="hero__media">
+                    <f:render partial="Media/Main" section="Main" arguments="{
+                        file: images.0,
+                        settings: settings.images.hero,
+                        cssClass: 'hero__media-item'
+                    }" />
+                </div>
+            </f:if>
+
+            <f:if condition="{data.bodytext}">
+                <div class="hero__content">
+                    <f:render partial="Content/Bodytext" arguments="{bodytext: data.bodytext}" />
+                </div>
+            </f:if>
+        </div>
+    </f:section>
+</html>

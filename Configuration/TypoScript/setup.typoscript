@@ -31,3 +31,34 @@ tt_content.ps14_tabs.templateName = Tabs
 // Timeline (Content Block ps14/timeline)
 tt_content.ps14_timeline < tt_content.ps14_accordion
 tt_content.ps14_timeline.templateName = Timeline
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Hero (Content Block ps14/hero): Bild oder Video mit Ueberschrift und Kurztext
+tt_content.ps14_hero < tt_content.ps14_accordion
+tt_content.ps14_hero {
+  templateName = Hero
+
+  settings.images.hero {
+    width = 1920
+    cropVariant = default
+    mediaQueries {
+      1200 {
+        width = 1920
+        cropVariant = default
+        mediaQuery = (min-width: 1200px)
+      }
+
+      768 {
+        width = 1200
+        cropVariant = default
+        mediaQuery = (min-width: 768px)
+      }
+
+      0 {
+        width = 768
+        cropVariant = default
+        mediaQuery = (min-width: 0px)
+      }
+    }
+  }
+}
